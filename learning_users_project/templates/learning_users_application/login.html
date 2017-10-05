@@ -1,0 +1,16 @@
+{% extends 'learning_users_application/base.html' %}
+{% block body_block %}
+
+  <div class="jumbotron">
+    <h3 class="page-header">Please login here!</h3><hr><br>
+    <form class="" action="{% url 'learning_users_application:user_login' %}" method="post">
+      {% csrf_token %}
+      <label for="username">Username:</label>
+      <input type="text" name="username" placeholder="Enter username">
+      <label for="password">Password:</label>
+      <input type="password" name="password" placeholder="Password">
+      <input class="btn btn-info" type="submit" value="Login">
+    </form>
+  </div>
+
+{% endblock %}
